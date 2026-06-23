@@ -1,103 +1,86 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="https://sf-static.upanhlaylink.com/img/image_2026062330d16beadb8e49e645f57eea4432deee.jpg" />
-  <!-- preload Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân</title>
 
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    >
-  </noscript>
-  
-  <!-- SEO Utama -->
-  <title>Nguyễn Việt Hoàng | Hai Phong Devil | Web Developer</title>
-  <meta name="description" content="Website chính thức của Nguyễn Việt Hoàng (Hai Phong Devil). Web Developer chuyên nghiệp, quản lý hệ thống HOANGKUN STORE." />
-  <meta name="keywords" content="Nguyễn Việt Hoàng, Hai Phong Devil, Hoangkun, Web Developer, HOANGKUN STORE" />
-  <meta name="author" content="Nguyễn Việt Hoàng" />
-
-  <!-- Theme / PWA -->
-  <meta name="theme-color" content="#030014" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hoangkun1207.github.io/Kunmmo/" />
-  <meta property="og:title" content="Nguyễn Việt Hoàng | Web Developer" />
-  <meta property="og:description" content="Portfolio và hệ thống quản lý source code HOANGKUN STORE." />
-  <meta property="og:image" content="https://sf-static.upanhlaylink.com/img/image_2026062330d16beadb8e49e645f57eea4432deee.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://hoangkun1207.github.io/Kunmmo/" />
-  <meta name="twitter:title" content="Nguyễn Việt Hoàng | Web Developer" />
-  <meta name="twitter:description" content="Website chính thức của Nguyễn Việt Hoàng." />
-  <meta name="twitter:image" content="https://sf-static.upanhlaylink.com/img/image_2026062330d16beadb8e49e645f57eea4432deee.jpg" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://hoangkun1207.github.io/Kunmmo/" />
-
-  <!-- Structured Data: Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nguyễn Việt Hoàng",
-    "url": "https://hoangkun1207.github.io/Kunmmo/",
-    "image": "https://sf-static.upanhlaylink.com/img/image_2026062330d16beadb8e49e645f57eea4432deee.jpg",
-    "jobTitle": "Web Developer",
-    "description": "Người đứng sau hệ thống HOANGKUN STORE, chuyên thiết kế website và cung cấp mã nguồn kỹ thuật số.",
-    "sameAs": [
-      "https://github.com/Hoangkun1207"
-    ]
-  }
-  </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- Loading Screen -->
-<div id="loading" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#030014; display:flex; justify-content:center; align-items:center; z-index:9999;">
-    <div style="position:relative; text-align:center;">
-        <div style="width:50px; height:50px; border:4px solid transparent; border-top:4px solid #6366f1; border-radius:50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
-        <p style="color:#e5e7eb; margin-top:15px; font-family:sans-serif; font-size:14px;">Đang tải hệ thống HOANGKUN...</p>
-    </div>
-</div>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Portfolio</div>
 
-<style>
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="projects.html">Dự Án</a></li>
+                <li><a href="certificates.html">Chứng Chỉ</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<script>
-    window.addEventListener('load', function() {
-        document.getElementById('loading').style.display = 'none';
-    });
-</script>
-  
-  <header style="display:none">
-    <h1>Nguyễn Việt Hoàng</h1>
-    <p>
-      Web Developer tại HOANGKUN STORE. Tôi chuyên phát triển các giải pháp web và hệ thống quản lý mã nguồn chuyên nghiệp.
-    </p>
-  </header>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Xin Chào 👋</h1>
+            <h2>Tôi là <span>Tên Của Bạn</span></h2>
+            <p>
+                Front-End Developer | Web Designer
+            </p>
 
-  <div id="root"></div>
+            <a href="projects.html" class="btn">
+                Xem Dự Án
+            </a>
+        </div>
+    </section>
 
-  <script type="module" src="/src/main.jsx"></script>
+    <!-- About Preview -->
+    <section class="about-preview">
+        <h2>Giới Thiệu</h2>
+
+        <p>
+            Tôi là lập trình viên yêu thích phát triển website hiện đại,
+            tối ưu trải nghiệm người dùng và xây dựng các sản phẩm chất lượng.
+        </p>
+
+        <a href="about.html">Xem thêm →</a>
+    </section>
+
+    <!-- Project Preview -->
+    <section class="project-preview">
+        <h2>Dự Án Nổi Bật</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Website cá nhân giới thiệu bản thân.</p>
+            </div>
+
+            <div class="card">
+                <h3>Landing Page</h3>
+                <p>Trang giới thiệu sản phẩm.</p>
+            </div>
+
+            <div class="card">
+                <h3>Dashboard</h3>
+                <p>Hệ thống quản lý dữ liệu.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
