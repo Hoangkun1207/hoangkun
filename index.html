@@ -1,18 +1,52 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Cá Nhân</title>
 
-    <link rel="stylesheet" href="css/style.css">
+```
+<link rel="stylesheet" href="css/style.css">
+```
+
 </head>
 <body>
+
+```
+<!-- LOADER -->
+<div id="loader">
+
+    <div class="logo-container">
+        <div class="ring"></div>
+        <div class="ring ring2"></div>
+
+        <h1 class="logo">
+            PORTFOLIO
+        </h1>
+    </div>
+
+    <div class="loading-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="percent" id="percent">
+        0%
+    </div>
+
+    <p class="loading-text">
+        Loading Experience...
+    </p>
+
+</div>
+
+<!-- WEBSITE -->
+<div id="content">
 
     <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="logo">My Portfolio</div>
+            <div class="logo-nav">My Portfolio</div>
 
             <ul class="nav-links">
                 <li><a href="index.html">Trang Chủ</a></li>
@@ -28,7 +62,12 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Xin Chào 👋</h1>
-            <h2>Tôi là <span>Tên Của Bạn</span></h2>
+
+            <h2>
+                Tôi là
+                <span>Tên Của Bạn</span>
+            </h2>
+
             <p>
                 Front-End Developer | Web Designer
             </p>
@@ -39,7 +78,7 @@
         </div>
     </section>
 
-    <!-- About Preview -->
+    <!-- About -->
     <section class="about-preview">
         <h2>Giới Thiệu</h2>
 
@@ -48,11 +87,14 @@
             tối ưu trải nghiệm người dùng và xây dựng các sản phẩm chất lượng.
         </p>
 
-        <a href="about.html">Xem thêm →</a>
+        <a href="about.html">
+            Xem thêm →
+        </a>
     </section>
 
-    <!-- Project Preview -->
+    <!-- Projects -->
     <section class="project-preview">
+
         <h2>Dự Án Nổi Bật</h2>
 
         <div class="cards">
@@ -73,14 +115,19 @@
             </div>
 
         </div>
+
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Portfolio. All Rights Reserved.</p>
+        <p>
+            © 2025 Portfolio. All Rights Reserved.
+        </p>
     </footer>
 
-    <script src="js/main.js"></script>
+</div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
