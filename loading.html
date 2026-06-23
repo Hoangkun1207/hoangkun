@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#020617;
+    overflow:hidden;
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#020617;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-container{
+    position:relative;
+    width:220px;
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    color:#fff;
+    font-size:22px;
+    letter-spacing:3px;
+    z-index:2;
+    animation:pulse 2s infinite;
+}
+
+.ring{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border:3px solid #38bdf8;
+    border-radius:50%;
+    animation:rotate 4s linear infinite;
+    box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+}
+
+.ring2{
+    width:220px;
+    height:220px;
+    border-color:#22c55e;
+    animation:rotateReverse 6s linear infinite;
+}
+
+.loading-bar{
+    width:320px;
+    height:8px;
+    background:#1e293b;
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:25px;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#38bdf8,#22c55e);
+    animation:loading 3s forwards;
+}
+
+.percent{
+    color:#fff;
+    margin-top:15px;
+    font-size:18px;
+}
+
+.loading-text{
+    margin-top:20px;
+    color:#94a3b8;
+    font-size:14px;
+    letter-spacing:2px;
+    border-right:2px solid #fff;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:typing 2s steps(25),blink .6s infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes rotateReverse{
+    from{transform:rotate(360deg);}
+    to{transform:rotate(0deg);}
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.1);}
+}
+
+@keyframes loading{
+    from{width:0%;}
+    to{width:100%;}
+}
+
+@keyframes typing{
+    from{width:0;}
+    to{width:190px;}
+}
+
+@keyframes blink{
+    50%{border-color:transparent;}
+}
+
+.fade-out{
+    opacity:0;
+    transition:1s;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+
+    <div class="logo-container">
+        <div class="ring"></div>
+        <div class="ring ring2"></div>
+
+        <h1 class="logo">
+            PORTFOLIO
+        </h1>
+    </div>
+
+    <div class="loading-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="percent" id="percent">
+        0%
+    </div>
+
+    <p class="loading-text">
+        Loading Experience...
+    </p>
+
+</div>
+
+<script>
+let percent = 0;
+
+const counter =
+document.getElementById("percent");
+
+const interval =
+setInterval(()=>{
+
+    percent++;
+
+    counter.innerText =
+    percent + "%";
+
+    if(percent >= 100){
+
+        clearInterval(interval);
+
+        setTimeout(()=>{
+
+            document
+            .getElementById("loader")
+            .classList.add("fade-out");
+
+        },500);
+
+    }
+
+},30);
+</script>
+
+</body>
+</html>
